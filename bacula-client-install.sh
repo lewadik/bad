@@ -262,7 +262,7 @@ fi
 # ----------------------------------------------------------------------------
 log "Result"
 if have ss; then
-  ss -ltn 2>/dev/null | grep -E "[:.]$FD_PORT[[:space:]]" | sed 's/^/    /' || warn "nothing listening on $FD_PORT"
+  ss -ltn 2>/dev/null | grep -E "[:.]${FD_PORT}[[:space:]]" | sed 's/^/    /' || warn "nothing listening on $FD_PORT"
 fi
 
 cat <<EOF
